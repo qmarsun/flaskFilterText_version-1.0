@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Result</title>
+</head>
+<body>
+    <h1>Comparison Result</h1>
+    <ul>
+        {% for file, keywords in result.items() %}
+            <li><strong>{{ file }}</strong>: {% if keywords %}{{ ', '.join(keywords) }}{% else %}No matching keywords{% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
