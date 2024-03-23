@@ -3,6 +3,8 @@ import os
 
 app = Flask(__name__)
 
+#file1_path - resume
+#file2_path - jobs description
 def compare_files(file1_path, file2_path):
     with open(file1_path, 'r', encoding='utf-8') as f1, open(file2_path, 'r', encoding='utf-8') as f2:
         content1 = set(f1.read().split())
@@ -17,8 +19,11 @@ def index():
 
 @app.route('/compare', methods=['POST'])
 def compare():
+    # resume 
     file_to_compare = request.files['file_to_compare']
-    files = request.files.getlist('files[]')
+
+    # jobs description
+    files = request.files.getlist('files')
 
     # Save uploaded files to server
     file_to_compare_path = os.path.join('uploads', file_to_compare.filename)
