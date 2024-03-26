@@ -6,7 +6,7 @@
     <title>Comparison Result</title>
 </head>
 <body>
-    <h1>Job Discription</h1>
+    <h1>Comparison Result</h1>
     <ul>
         {% for file, keywords in result.items() %}
             <li><strong>{{ file }}</strong>: {% if keywords %}{{ ', '.join(keywords) }}{% else %}No matching keywords{% endif %}</li>

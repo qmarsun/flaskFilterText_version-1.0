@@ -6,11 +6,11 @@
     <title>File Comparison</title>
 </head>
 <body>
-    <h1>Single Resume</h1>
+    <h1>Compare Files</h1>
     <form action="/compare" method="POST" enctype="multipart/form-data">
-        <label for="file_to_compare">File to Compare:</label><br>
+        <label for="file_to_compare">Single Resume:</label><br>
         <input type="file" id="file_to_compare" name="file_to_compare"><br><br>
-        <label for="files">Select 100 files:</label><br>
+        <label for="files">Job Discription:</label><br>
         <input type="file" id="files" name="files[]" multiple><br><br>
         <input type="submit" value="Compare">
     </form>
