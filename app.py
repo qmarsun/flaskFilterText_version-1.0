@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
 import os
+import nltk
+from nltk.corpus import stopwords
+
+
 
 app = Flask(__name__)
 
@@ -9,6 +13,12 @@ def compare_files(file1_path, file2_path):
         content2 = set(f2.read().split())
         matching_keywords = content1.intersection(content2)
         return matching_keywords
+
+nltk.download('stopwords')
+  
+def remove_articles(words):
+    articles = set(stopwords.words('english'))
+    return [word for word in words if word.lower() not in articles]
 
 
 @app.route('/')
@@ -29,6 +39,9 @@ def compare():
         file_path = os.path.join('uploads', file.filename)
         file.save(file_path)
         matching_keywords = compare_files(file_to_compare_path, file_path)
+        
+        matching_keywords  = remove_articles(   matching_keywords )
+
         result[file.filename] = matching_keywords
 
     return render_template('result.html', result=result)
