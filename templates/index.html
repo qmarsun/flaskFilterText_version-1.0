@@ -8,14 +8,14 @@
 <body>
     <style>
      nav{
-        background-color: #3059E3;
+        /* background-color: #3059E3; */
        
      }
      nav h2{
         position: relative;
         top: 21px;
         left: 10px;
-        color:whitesmoke;
+        /* color:whitesmoke; */
      }
      ul{
         display: flex;
@@ -23,15 +23,15 @@
         margin-left: 800px;
         position: relative;
         bottom: 25px;
-        color: whitesmoke;
+        /* color: whitesmoke; */
      }
      li{
         margin-right: 100px;
      }
      ul button{
         border: none;
-        color: whitesmoke;
-        background-color: red;
+        /* color: whitesmoke; */
+        /* background-color: red; */
        padding-top: 5px;
        padding-bottom: 5px;
 
@@ -40,21 +40,21 @@
      }
      form{
         text-align: center;
-        background-color:  #3059E3;
+        /* background-color:  #3059E3; */
         padding: 50px;
         border-radius: 10px;
         margin-left: 600px;
         margin-right: 600px;
      }
      .foter{
-        background-color: #3059E3;
+        /* background-color: #3059E3; */
         text-align: center;
-        color: whitesmoke;
+        /* color: whitesmoke; */
         padding: 3px;
         position: relative;
         top: 235px;
      }
-     body{background-color:#8AA5FF}
+     /* body{background-color:#8AA5FF} */
     </style>
     <nav><h2>Kallal_Info</h2>
     <ul>
@@ -66,11 +66,11 @@
     </nav>
     <h1 style="text-align: center;color:black ;" >Job Discription Matching Resume</h1>
     <form action="/compare" method="POST" enctype="multipart/form-data">
-        <label style="color: whitesmoke;" for="file_to_compare">Single Resume</label><br><br>
+        <label  for="file_to_compare">Single Resume</label><br><br>
         <input style="border: none;"  type="file" id="file_to_compare" name="file_to_compare"><br><br><br>
-        <label style="color: whitesmoke;"for="files">Job Discription</label><br> <br>
+        <label for="files">Job Discription</label><br> <br>
         <input style="border: none;" type="file" id="files" name="files[]" multiple><br><br>
-        <input  style="background-color: #d4af37; border: none; padding: 1px; border-radius: 2px;" type="submit" value="Compare">
+        <input  style=" border: none; padding: 1px; border-radius: 2px;" type="submit" value="Compare">
     </form>
     <footer class="foter">Copyright @ -2024 </footer>
 </body>
